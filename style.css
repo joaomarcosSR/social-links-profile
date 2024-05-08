@@ -1,0 +1,124 @@
+:root {
+    /* Primary */
+    --primary: hsl(75, 94%, 57%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+    /* attribution */
+    --dark-blue: hsl(228, 45%, 44%);
+
+    /* Font size */
+    --fs-base: 0.87em;
+    --fs-h1: 1.5em;
+    --fs-sm: 0.7em;
+
+    /* https://foxland.fi/naming-typography-css-variables/ */
+    /* https://www.fixate.it/blog/make-your-css-variable-names-suck-less */
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+    background-color: var(--off-black);
+    margin: 0;
+}
+
+.inter-400 {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+}
+
+.inter-600 {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+}
+
+.inter-700 {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+}
+
+.social-card {
+    background-color: var(--dark-grey);
+    width: 100%;
+    max-width: 19.1em;
+    text-align: center;
+
+    /* center card */
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    padding: 2.1em;
+    border-radius: 0.7em;
+
+    /* remove */
+    opacity: 100%;
+}
+
+.social-card .avatar {
+    width: 5.5em;
+    border-radius: 50%;
+}
+
+.social-card .name {
+    color: var(--white);
+    font-size: var(--fs-h1);
+    margin: 1em 0 0 0;
+}
+
+.social-card .city {
+    color: var(--primary);
+    font-size: var(--fs-base);
+}
+
+.social-card .description {
+    color: var(--white);
+    font-size: var(--fs-base);
+    margin: 2em 0;
+}
+
+.social-card .social-link {
+    color: var(--white);
+    background-color: var(--grey);
+    font-size: var(--fs-base);
+    list-style-type: none;
+    margin: 1.45em 0 0 0;
+    padding: 0.9em;
+    border-radius: 0.5em;
+}
+
+.social-card .social-link:hover {
+    background-color: var(--primary);
+    color: var(--grey);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .social-card {
+        max-width: 15em;
+    }
+}
+
+.attribution {
+    color: var(--white);
+    font-size: var(--fs-sm);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
