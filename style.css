@@ -89,22 +89,27 @@ body {
 
 .social-card .social-link {
     color: var(--white);
-    background-color: var(--grey);
+    margin: 0;
+    padding: 0;
     font-size: var(--fs-base);
     list-style-type: none;
+}
+
+.social-card .social-link li {
+    background-color: var(--grey);
     margin: 1.45em 0 0 0;
     padding: 0.9em;
     border-radius: 0.5em;
 }
 
-.social-card .social-link:hover {
+.social-card .social-link li:hover {
     background-color: var(--primary);
     color: var(--grey);
     cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
-    .social-card {
+    .social-card .social-link li {
         max-width: 15em;
     }
 }
